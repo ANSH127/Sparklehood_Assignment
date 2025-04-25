@@ -1,0 +1,46 @@
+import React from "react";
+
+export default function Cards({ incident }) {
+  const [expanded, setExpanded] = React.useState(false);
+
+  return (
+    <div
+      key={incident.id}
+      className="border border-gray-300 rounded-lg shadow-md p-4 bg-white hover:shadow-lg hover:border-blue-400 transition-all duration-300"
+      
+    >
+      <h2 className="text-xl font-semibold mb-2 text-gray-800 hover:text-blue-500 transition-colors duration-300">
+        {incident.title}
+      </h2>
+      <p className="text-sm text-gray-600 mb-2">
+        <span className="font-bold">Severity:</span> {incident.severity}
+      </p>
+      <p className="text-sm text-gray-600">
+        <span className="font-bold">Reported Date:</span>{" "}
+        {new Date(incident.reported_at).toLocaleDateString()}
+      </p>
+      {!expanded && (
+        <p
+          className="text-sm text-blue-500 cursor-pointer mt-2 hover:underline"
+          onClick={() => setExpanded(!expanded)}
+        >
+          View details
+        </p>
+      )}
+      {expanded && (
+        <>
+          <p className="text-sm text-gray-600 mt-2">
+            <span className="font-bold">Description:</span>{" "}
+            {incident.description}
+          </p>
+          <p
+            className="text-sm text-blue-500 cursor-pointer mt-2 hover:underline"
+            onClick={() => setExpanded(!expanded)}
+          >
+            Hide details
+          </p>
+        </>
+      )}
+    </div>
+  );
+}
