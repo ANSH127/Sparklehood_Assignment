@@ -1,12 +1,50 @@
-# React + Vite
+# AI Safety Incidents Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React-based web application built using Vite. It provides a dashboard to display and manage AI safety incidents, allowing users to filter, sort, and add new incidents.
 
-Currently, two official plugins are available:
+## Features
+- Display a list of AI safety incidents in a responsive grid layout.
+- Filter incidents by severity (High, Medium, Low).
+- Sort incidents by date (Oldest First, Newest First).
+- Add new incidents using a form with input validation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- **Language**: JavaScript (ES6+)
+- **Framework**: React
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
 
-## Expanding the ESLint configuration
+## Prerequisites
+Before running the project, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (version 14 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/ai-safety-incidents-dashboard.git
+cd ai-safety-incidents-dashboard
+```
+
+### 2. Install Dependencies
+Install the required dependencies using npm or yarn:
+```bash
+# Using npm
+npm install
+
+# OR using yarn
+yarn install
+```
+
+### 3. Run the Development Server
+Start the development server to run the project locally:
+```bash
+# Using npm
+npm run dev
+
+# OR using yarn
+yarn dev
+```
+
+The application will be available at `http://localhost:5173` (or another port if specified).
