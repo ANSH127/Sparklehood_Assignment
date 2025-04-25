@@ -121,7 +121,7 @@ export default function DashboardPage() {
           onSubmit={handleFormSubmit}
         >
           <h2 className="text-2xl font-bold mb-4 text-gray-800">
-            Add New Incident
+          Report New Incident
           </h2>
           <div className="mb-4">
             <label className="block text-gray-700 font-medium mb-2">
