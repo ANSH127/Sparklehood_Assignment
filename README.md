@@ -23,8 +23,8 @@ Before running the project, ensure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/ai-safety-incidents-dashboard.git
-cd ai-safety-incidents-dashboard
+git clone https://github.com/ANSH127/Sparklehood_Assignment.git
+cd Sparklehood_Assignment
 ```
 
 ### 2. Install Dependencies
