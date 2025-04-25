@@ -77,7 +77,7 @@ export default function DashboardPage() {
         AI Safety Incidents
       </h1>
 
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
+      <div className="flex flex-row justify-center items-center gap-4 mt-6">
         <div>
           <p className="text-lg font-medium text-gray-700">
             Filter by Severity
