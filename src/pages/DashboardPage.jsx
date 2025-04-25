@@ -4,6 +4,7 @@ import Cards from "../components/Cards";
 
 export default function DashboardPage() {
   const [incidents, setIncidents] = useState([]);
+  const [tempinicidents, setTempIncidents] = useState([]);
   const [selectedSeverity, setSelectedSeverity] = useState("all");
   const [addIncidentform, setAddIncidentForm] = useState(false);
   const [newIncident, setNewIncident] = useState({
@@ -16,9 +17,9 @@ export default function DashboardPage() {
     const value = e.target.value;
     setSelectedSeverity(value);
     if (value === "all") {
-      setIncidents(data.incidents);
+      setIncidents(tempinicidents);
     } else {
-      const filteredIncidents = data.incidents.filter(
+      const filteredIncidents = tempinicidents.filter(
         (incident) => incident.severity === value
       );
       setIncidents(filteredIncidents);
@@ -60,6 +61,8 @@ export default function DashboardPage() {
       reported_at: new Date().toISOString(),
     };
     setIncidents((prev) => [incidentToAdd, ...prev]);
+    setTempIncidents((prev) => [incidentToAdd, ...prev]);
+    
 
     setNewIncident({ title: "", description: "", severity: "Medium" });
     setAddIncidentForm(false);
@@ -68,6 +71,7 @@ export default function DashboardPage() {
   React.useEffect(() => {
     if (data && data.incidents) {
       setIncidents(data.incidents);
+      setTempIncidents(data.incidents);
     }
   }, []);
 
